@@ -1,0 +1,42 @@
+
+
+/* ============================================================
+   BLOQUE: descripcion
+   - La sección del "Qué es". Le puse scroll-margin-top de 80px porque si no lo hacía, 
+     cuando dabas clic en el menú, el header fijo me tapaba el título. Con esto cuadra perfecto.
+   ============================================================ */
+.descripcion {
+    padding: 4rem 0;
+    background: #f8fafc;
+    scroll-margin-top: 80px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.descripcion__titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #0f172a;
+}
+
+/* ELEMENTO: descripcion__contenido
+   - Es el bloque blanco donde va el texto. Le puse bordes redondeados (16px)
+     y una sombra milimétrica para que parezca una tarjeta limpia encima del fondo.
+*/
+.descripcion__contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.descripcion__texto {
+    font-size: 1.05rem;
+    line-height: 1.7; /* Bastante espacio entre renglones para que no dé pereza leerlo */
+    color: #334155;
+    margin-bottom: 1.2rem;
+}

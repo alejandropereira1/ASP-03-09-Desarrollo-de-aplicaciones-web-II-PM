@@ -1,0 +1,85 @@
+
+/* ============================================================
+   BLOQUE: registro
+   - El formulario para captar cuentas nuevas. 
+   ============================================================ */
+.registro {
+    padding: 4rem 0;
+    background: #ffffff;
+    scroll-margin-top: 80px;
+}
+
+.registro__titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.registro__subtitulo {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+}
+
+.registro__formulario {
+    max-width: 480px;
+    margin: 0 auto;
+    background: #f8fafc;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.registro__grupo {
+    margin-bottom: 1.25rem; /* Para que los inputs no queden pegados uno encima del otro */
+}
+
+.registro__etiqueta {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* ELEMENTO: registro__campo
+   - El truco aquí es usar las pseudoclases :invalid y :valid del HTML5. 
+     Si el usuario mete mal el correo se pone el borde rojo, y si ya cumple con todo,
+     pasa a verde.
+*/
+.registro__campo {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: #ffffff;
+}
+.registro__campo:focus {
+    outline: none;
+    border-color: #2563eb; /* Cuando pinchan el campo se pinta azul */
+}
+.registro__campo:required:invalid {
+    border-color: #f87171; /* Borde rojo si falta o está mal */
+}
+.registro__campo:required:valid {
+    border-color: #4ade80; /* Borde verde si ya está al pelo */
+}
+
+.registro__enviar {
+    background-color: #0f172a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+.registro__enviar:hover {
+    background-color: #1e293b;
+}

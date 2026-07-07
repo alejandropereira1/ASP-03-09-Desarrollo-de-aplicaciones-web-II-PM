@@ -1,0 +1,68 @@
+/* ============================================================
+   BLOQUE: pie
+   - Pie de página con contacto, enlaces y copyright.
+   ============================================================ */
+.pie {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.pie__interior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.pie__marca {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #fff;
+}
+.pie__marca span {
+    color: #60a5fa;
+}
+
+.pie__contacto p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.pie__enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+}
+.pie__enlace {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.pie__enlace:hover {
+    color: #fff;
+}
+
+.pie__redes {
+    display: flex;
+    gap: 1rem;
+}
+.pie__red-social {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.pie__red-social:hover {
+    color: #fff;
+}
+
+.pie__copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    width: 100%;
+}

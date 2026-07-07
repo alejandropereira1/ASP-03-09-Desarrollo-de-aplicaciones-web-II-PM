@@ -1,0 +1,77 @@
+
+/* ============================================================
+   BLOQUE: testimonios
+   - La sección de comentarios de clientes. Volvemos a un fondo gris azulado (f1f5f9)
+     para que se note que entramos a otra zona del sitio.
+   ============================================================ */
+.testimonios {
+    padding: 4rem 0;
+    background: #f1f5f9;
+}
+
+.testimonios__titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.testimonios__grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.testimonio {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* ELEMENTO: testimonio__avatar
+   - La bolita con la letra del usuario. Creé modificadores (--azul, --verde, --morado)
+     para que las iniciales de cada cliente tengan colores diferentes y no se vea aburrido.
+*/
+.testimonio__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+.testimonio__avatar--azul {
+    background: #bfdbfe;
+    color: #1e3a8a;
+}
+.testimonio__avatar--verde {
+    background: #bbf7d0;
+    color: #14532d;
+}
+.testimonio__avatar--morado {
+    background: #e9d5ff;
+    color: #4c1d95;
+}
+
+.testimonio__comentario {
+    font-style: italic;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.testimonio__nombre {
+    font-weight: 600;
+}
+
+.testimonio__cargo {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+

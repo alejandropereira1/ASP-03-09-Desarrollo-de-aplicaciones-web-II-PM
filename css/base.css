@@ -1,0 +1,33 @@
+/* ============================================================
+   REINICIO Y BASE
+   - Reseteo los márgenes y paddings porque cada navegador (Chrome, Firefox)
+     pone lo que quiere por defecto y me volvía loco cuadrando espacios.
+   - El box-sizing lo dejo en border-box sí o sí. Si no lo pongo, cuando le sumo
+     un padding a una caja se me estira toda y se me tira en el diseño.
+   - Traje la fuente 'Inter' desde Google Fonts porque es limpia y moderna.
+   - El fondo f8fafc es un gris suave.
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;    /* Para que los textos largos respiren y se lean cómodos */
+    color: #1e293b;      /* Un gris oscuro tirando a negro, no tan plano */
+    background-color: #f8fafc;
+}
+
+/* BLOQUE: contenedor
+   - Esta clase es un salvavidas. La creé para centrar todo en la pantalla
+     y no tener que estar repitiendo márgenes en cada sección.
+   - Le puse max-width de 1200px para que en pantallas gigantes el contenido
+     no se estire feo hacia los lados.
+*/
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Un aire a los lados para que en celulares no toque el borde del vidrio */
+}

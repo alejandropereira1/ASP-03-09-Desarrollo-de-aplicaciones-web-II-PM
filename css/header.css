@@ -1,0 +1,111 @@
+
+
+
+/* ============================================================
+   BLOQUE: header
+   - Lo llamé en inglés porque en los tutoriales siempre le dicen así.
+   - Le puse position: sticky para que se quede pegado arriba cuando bajas.
+     Así el usuario no tiene que volver a subir del todo si quiere usar el menú.
+   - El fondo tiene un toque transparente (rgba) para que se vea el efecto premium
+     cuando pasa el video o las fotos por detrás.
+   ============================================================ */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Sombra sutil para que parezca flotando */
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;        /* Un número alto para asegurar que nada le pase por encima */
+}
+
+/* ELEMENTO: header__interior
+   - Aquí metí el logo y los enlaces. Uso Flexbox para mandarlos a las esquinas
+     con justify-content y wrap para que si se quedan sin espacio, bajen solitos.
+*/
+.header__interior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ELEMENTO: header__logo
+   - Le quité la línea de abajo que traen los enlaces por defecto (text-decoration: none).
+   - El letter-spacing en negativo hace que las letras se junten un pelín y se vea más estético.
+   - El span azul es para darle el toque de marca al punto final.
+*/
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+.header__logo span {
+    color: #2563eb;
+}
+
+/* ELEMENTO: header__navegacion
+   - Es el grupito del menú completo más el botón de registro. 
+   - Uso un gap grande (2rem) para que queden bien separados y no se vea amontonado.
+*/
+.header__navegacion {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* ELEMENTO: header__lista-navegacion
+   - Esta es la lista de links. Le quité las viñetas con list-style: none
+     porque esos puntitos negros se ven feos en un menú.
+*/
+.header__lista-navegacion {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+/* ELEMENTO: header__enlace-navegacion
+   - El estilo para cada link. Le puse una transición suave (0.2s) para que cuando
+     pases el mouse el cambio de color no sea tan brusco.
+   - El modificador --activo es por si después quiero dejar marcado en qué página está.
+*/
+.header__enlace-navegacion {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent; /* Truco para que cuando aparezca la línea en hover no brinque el texto */
+}
+.header__enlace-navegacion:hover {
+    color: #0f172a;
+}
+.header__enlace-navegacion--activo {
+    color: #0f172a;
+    border-bottom-color: #2563eb;
+}
+
+/* ELEMENTO: header__llamada-accion
+   - El botón principal de "Empieza ahora". Le metí el padding para darle forma
+     de botón real y un color azul llamativo para que la gente le dé clic rápido.
+*/
+.header__llamada-accion {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+.header__llamada-accion:hover {
+    background-color: #1d4ed8;
+}

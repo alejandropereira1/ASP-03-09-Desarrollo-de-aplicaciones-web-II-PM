@@ -1,0 +1,95 @@
+
+
+/* ============================================================
+   BLOQUE: caracteristicas
+   - Aquí metí las ventajas del producto. Cambié a fondo blanco total para romper
+     el gris de la sección anterior y crear ritmo visual al hacer scroll.
+   ============================================================ */
+.caracteristicas {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.caracteristicas__titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.caracteristicas__subtitulo {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+}
+
+/* ELEMENTO: caracteristicas__grilla
+   - Usé CSS Grid porque para hacer columnas es lo mejor. Con el auto-fit y minmax
+     le digo que meta las tarjetas que quepan de mínimo 240px. Si cambias de pantalla,
+     ellas solas se acomodan sin romper nada.
+*/
+.caracteristicas__grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+/* BLOQUE: tarjeta-caracteristica
+   - Un bloque interno para cada cuadro. Tiene un efecto hover clásico pero efectivo:
+     sube 4px y oscurece un poquito la sombra para dar feedback al usuario.
+*/
+.tarjeta-caracteristica {
+    background: #f8fafc;
+    padding: 1.8rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.tarjeta-caracteristica:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* MODIFICADOR: tarjeta-caracteristica--destacada
+   - Quería que la primera tarjeta tuviera un look diferente para romper la monotonía.
+     Le cambié el fondo a un azul pastel y el borde a azul rey.
+*/
+.tarjeta-caracteristica--destacada {
+    background: #eef2ff;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+.tarjeta-caracteristica--destacada .tarjeta-caracteristica__icono {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* ELEMENTO: tarjeta-caracteristica__icono
+   - El circulito del emoji. Lo centré usando display: flex junto con
+     align-items y justify-content al centro. Una maravilla para no renegar.
+*/
+.tarjeta-caracteristica__icono {
+    font-size: 2.2rem;
+    width: 60px;
+    height: 60px;
+    background: #dbeafe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #2563eb;
+}
+
+.tarjeta-caracteristica__titulo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-caracteristica__descripcion {
+    color: #475569;
+    font-size: 0.95rem;
+}
+

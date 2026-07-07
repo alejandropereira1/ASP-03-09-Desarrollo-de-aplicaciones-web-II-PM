@@ -1,0 +1,24 @@
+¿Cómo apliqué BEM en el código?
+
+1. Para no enredarme, dividí la página en partes independientes siguiendo la estructura de la metodología:
+
+    - El Bloque (La parte grande): Es el componente principal que puede vivir solo en cualquier lado de la página. Por ejemplo, para la parte de arriba usé la clase .header, y para la zona de registro usé .registro.
+
+    - El Elemento (Lo que va adentro): Son las cosas que están metidas dentro del bloque y que no tienen sentido si las sacas de ahí.
+      Para unirlas al bloque, BEM dice que se usan dos guiones bajos (__). Por ejemplo, los enlaces del menú los nombré .header__enlace-navegacion y los campos donde el usuario escribe los llamé .registro__campo.
+      Así, con solo leer el CSS, ya sé exactamente a qué sección pertenece cada botón o texto.
+
+    - El Modificador (El cambio de aspecto): Esto se usa cuando un elemento es casi igual a los demás, pero cambia en algo pequeño como el color o el tamaño.
+      BEM pide usar dos guiones medios (--). Un ejemplo claro que usé fue en las tarjetas de precios: todos los planes usan .plan, pero el plan que quería resaltar porque es el recomendado lo llamé .plan--destacado para meterle un fondo diferente y que resalte.
+
+2. Beneficios reales que noté al usarlo:
+
+    - Es muy fácil de leer: Si mañana tengo que cambiar el color del botón del formulario de contacto, no tengo que adivinar. Voy directo a buscar .contacto__enviar en el CSS y listo, voy a la fija.
+
+    - No se cruzan los cables: Como cada clase tiene el nombre de su sección al principio, no hay peligro de que un estilo de la sección de características me dañe de la nada el diseño del pie de página. Todo está en su cajita.
+
+    - Se piensa de forma más ordenada: Obligarse a usar BEM desde que uno está aprendiendo ayuda a que el código quede limpio y estructurado.
+
+3. Conclusión: 
+
+    - aunque al principio da un poquito de pereza escribir nombres tan largos en las clases, vale totalmente la pena porque el código queda tan ordenado que da gusto verlo.

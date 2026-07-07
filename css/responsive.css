@@ -1,0 +1,75 @@
+
+/* ============================================================
+   RESPONSIVE (Media Query)
+   - Aquí es donde ocurre la magia para celulares. Escogí los 768px porque es la medida
+     estándar donde mueren las pantallas de compu/tablet y empiezan los teléfonos.
+   - Todo lo que antes estaba horizontal en flex, aquí lo paso a columnas.
+   ============================================================ */
+@media (max-width: 768px) {
+    
+    /* El menú de arriba pasa a ser vertical porque de lado ya no cabe en la pantalla de un celular */
+    .header__interior {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    .header__navegacion {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    .header__lista-navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header__llamada-accion {
+        align-self: center; /* Centra el botón en todo el medio */
+    }
+
+    /* Reduzco los textos del Hero para que la letra no quede gigante en una pantalla chiquita */
+    .hero {
+        padding: 4rem 0 3rem;
+        min-height: 70vh;
+    }
+    .hero__titulo {
+        font-size: 2.4rem;
+    }
+    .hero__subtitulo {
+        font-size: 1rem;
+    }
+    .hero__boton {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Acá destruyo las 3 columnas de las grillas. Al poner grid-template-columns: 1fr,
+       le digo que cada tarjeta ocupe todo el ancho disponible, apilándolas una abajo de otra.
+    */
+    .caracteristicas__grilla,
+    .testimonios__grilla,
+    .precios__grilla {
+        grid-template-columns: 1fr;
+    }
+
+    /* El pie de página también se centra todo para que se vea ordenado en vertical */
+    .pie__interior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .pie__enlaces {
+        justify-content: center;
+    }
+
+    /* Le quito un poco de padding a las cajas internas para raspar espacio de los bordes */
+    .contacto__formulario,
+    .registro__formulario,
+    .descripcion__contenido {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Quito el efecto scale en móviles porque al estar vertical se veía raro si una tarjeta pisaba a la otra */
+    .plan--destacado {
+        transform: none;
+    }
+}
